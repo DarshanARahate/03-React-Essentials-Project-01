@@ -7,6 +7,11 @@ import Header from './components/Header/Header.jsx';
 
 
 function App() {
+
+  function handleSelect() {
+    console.log('Hello world - Selected')
+  }
+
   return (
     <div>
       <Header />
@@ -28,10 +33,10 @@ function App() {
       <section id="examples">
         <h2>Examples</h2>
         <menu>
-          <TabButton>Components</TabButton>
-          <TabButton>JSX</TabButton>
-          <TabButton>Props</TabButton>
-          <TabButton>State</TabButton>
+          <TabButton onSelect={handleSelect}>Components</TabButton>
+          <TabButton onSelect={handleSelect}>JSX</TabButton>
+          <TabButton onSelect={handleSelect}>Props</TabButton>
+          <TabButton onSelect={handleSelect}>State</TabButton>
         </menu>
       </section>
 
