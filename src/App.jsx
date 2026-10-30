@@ -8,8 +8,8 @@ import Header from './components/Header/Header.jsx';
 
 function App() {
 
-  function handleSelect() {
-    console.log('Hello world - Selected')
+  function handleSelect(selectedButton) {
+    console.log('Hello world - Selected', selectedButton)
   }
 
   return (
@@ -33,11 +33,12 @@ function App() {
       <section id="examples">
         <h2>Examples</h2>
         <menu>
-          <TabButton onSelect={handleSelect}>Components</TabButton>
-          <TabButton onSelect={handleSelect}>JSX</TabButton>
-          <TabButton onSelect={handleSelect}>Props</TabButton>
-          <TabButton onSelect={handleSelect}>State</TabButton>
+          <TabButton onSelect={() => handleSelect('Components')}>Components</TabButton>
+          <TabButton onSelect={() => handleSelect('JSX')}>JSX</TabButton>
+          <TabButton onSelect={() => handleSelect('Props')}>Props</TabButton>
+          <TabButton onSelect={() => handleSelect('State')}>State</TabButton>
         </menu>
+        Dynamic Content
       </section>
 
       </main>
